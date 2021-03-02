@@ -73,7 +73,7 @@
 		4700A76B2586040600699D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4700A76E2586040600699D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4700A7702586040600699D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4700A7752586040700699D2F /* RecipeBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4700A7752586040700699D2F /* RecipeBookUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeBookUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4700A77B2586040700699D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4700A79E2586064F00699D2F /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		4700A7AA25860EF500699D2F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				4700A75E2586040500699D2F /* RecipeBook */,
-				4700A7782586040700699D2F /* RecipeBookTests */,
+				4700A7782586040700699D2F /* RecipeBookUnitTest */,
 				4715DA55258E40E1008BB015 /* RecipeBookUITest */,
 				4700A75D2586040500699D2F /* Products */,
 			);
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				4700A75C2586040500699D2F /* RecipeBook.app */,
-				4700A7752586040700699D2F /* RecipeBookTests.xctest */,
+				4700A7752586040700699D2F /* RecipeBookUnitTests.xctest */,
 				4715DA54258E40E1008BB015 /* RecipeBookUITest.xctest */,
 			);
 			name = Products;
@@ -176,13 +176,13 @@
 			path = RecipeBook;
 			sourceTree = "<group>";
 		};
-		4700A7782586040700699D2F /* RecipeBookTests */ = {
+		4700A7782586040700699D2F /* RecipeBookUnitTest */ = {
 			isa = PBXGroup;
 			children = (
 				4720EE3E258DEEB900F0305C /* MainViewTests */,
 				4700A77B2586040700699D2F /* Info.plist */,
 			);
-			path = RecipeBookTests;
+			path = RecipeBookUnitTest;
 			sourceTree = "<group>";
 		};
 		4700A795258604AF00699D2F /* Resources */ = {
@@ -337,9 +337,9 @@
 			productReference = 4700A75C2586040500699D2F /* RecipeBook.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4700A7742586040700699D2F /* RecipeBookTests */ = {
+		4700A7742586040700699D2F /* RecipeBookUnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4700A78C2586040700699D2F /* Build configuration list for PBXNativeTarget "RecipeBookTests" */;
+			buildConfigurationList = 4700A78C2586040700699D2F /* Build configuration list for PBXNativeTarget "RecipeBookUnitTests" */;
 			buildPhases = (
 				4700A7712586040700699D2F /* Sources */,
 				4700A7722586040700699D2F /* Frameworks */,
@@ -350,9 +350,9 @@
 			dependencies = (
 				4700A7772586040700699D2F /* PBXTargetDependency */,
 			);
-			name = RecipeBookTests;
+			name = RecipeBookUnitTests;
 			productName = FinalWorkTests;
-			productReference = 4700A7752586040700699D2F /* RecipeBookTests.xctest */;
+			productReference = 4700A7752586040700699D2F /* RecipeBookUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		4715DA53258E40E1008BB015 /* RecipeBookUITest */ = {
@@ -409,7 +409,7 @@
 			projectRoot = "";
 			targets = (
 				4700A75B2586040500699D2F /* RecipeBook */,
-				4700A7742586040700699D2F /* RecipeBookTests */,
+				4700A7742586040700699D2F /* RecipeBookUnitTests */,
 				4715DA53258E40E1008BB015 /* RecipeBookUITest */,
 			);
 		};
@@ -685,14 +685,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FinalWorkTests/Info.plist;
+				INFOPLIST_FILE = RecipeBookUnitTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Home.FinalWorkTests;
+				PRODUCT_BUNDLE_IDENTIFIER = RecipeBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -706,14 +706,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FinalWorkTests/Info.plist;
+				INFOPLIST_FILE = RecipeBookUnitTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Home.FinalWorkTests;
+				PRODUCT_BUNDLE_IDENTIFIER = RecipeBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -725,17 +725,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FinalWorkUITest/Info.plist;
+				INFOPLIST_FILE = RecipeBookUITest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Home.FinalWorkUITest;
+				PRODUCT_BUNDLE_IDENTIFIER = RecipeBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FinalWork;
+				TEST_TARGET_NAME = RecipeBook;
 			};
 			name = Debug;
 		};
@@ -743,17 +743,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FinalWorkUITest/Info.plist;
+				INFOPLIST_FILE = RecipeBookUITest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Home.FinalWorkUITest;
+				PRODUCT_BUNDLE_IDENTIFIER = RecipeBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FinalWork;
+				TEST_TARGET_NAME = RecipeBook;
 			};
 			name = Release;
 		};
@@ -778,7 +778,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4700A78C2586040700699D2F /* Build configuration list for PBXNativeTarget "RecipeBookTests" */ = {
+		4700A78C2586040700699D2F /* Build configuration list for PBXNativeTarget "RecipeBookUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4700A78D2586040700699D2F /* Debug */,

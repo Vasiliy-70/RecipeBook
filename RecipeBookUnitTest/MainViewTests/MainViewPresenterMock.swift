@@ -5,7 +5,7 @@
 //  Created by Боровик Василий on 19.12.2020.
 //
 
-@testable import FinalWork
+@testable import RecipeBook
 
 class MainViewPresenterMock: IMainViewPresenter {
 	var recipeList: [RecipeContent] {

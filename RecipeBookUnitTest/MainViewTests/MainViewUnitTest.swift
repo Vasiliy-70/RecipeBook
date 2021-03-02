@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import FinalWork
+@testable import RecipeBook
 
 class MainViewUnitTest: XCTestCase {
 

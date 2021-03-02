@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4700A7742586040700699D2F"
-               BuildableName = "RecipeBookTests.xctest"
-               BlueprintName = "RecipeBookTests"
+               BuildableName = "RecipeBookUnitTests.xctest"
+               BlueprintName = "RecipeBookUnitTests"
                ReferencedContainer = "container:RecipeBook.xcodeproj">
             </BuildableReference>
          </TestableReference>
