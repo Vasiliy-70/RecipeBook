@@ -13,7 +13,7 @@ protocol IRecipeEditView: class {
 }
 
 final class RecipeEditView: UIView {
-	private let viewController: IRecipeEditViewActionHandler
+	private weak var viewController: IRecipeEditViewActionHandler?
 	
 	private var scrollView = UIScrollView()
 	private var dishImage = UIImageView()
@@ -229,7 +229,7 @@ private extension RecipeEditView {
 	}
 	
 	@objc func tapOnImage() {
-		self.viewController.tapOnImage()
+		self.viewController?.tapOnImage()
 	}
 	
 	@objc func keyboardWillShow(notification: NSNotification) {

@@ -14,7 +14,7 @@ protocol ICartView {
 
 final class CartView: UIView {
 	private let ingredientsTable = UITableView(frame: .zero)
-	private let tableController: ICartViewTableController
+	private weak var tableController: ICartViewTableController?
 	
 	private enum Constraints {
 		static let ingredientsTableOffset: CGFloat = 10
@@ -36,10 +36,10 @@ final class CartView: UIView {
 
 private extension CartView {
 	func configureTable() {
-		self.ingredientsTable.register(UITableViewCell.self, forCellReuseIdentifier: self.tableController.cellId)
+		self.ingredientsTable.register(UITableViewCell.self, forCellReuseIdentifier: self.tableController?.cellId ?? "")
 		
-		self.ingredientsTable.delegate = self.tableController.delegate
-		self.ingredientsTable.dataSource = self.tableController.dataSource
+		self.ingredientsTable.delegate = self.tableController?.delegate
+		self.ingredientsTable.dataSource = self.tableController?.dataSource
 	}
 	
 	func setupTableAppearance() {

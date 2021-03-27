@@ -14,7 +14,7 @@ protocol IIngredientsView {
 
 final class IngredientsView: UIView {
 	private let ingredientsTable = UITableView()
-	private let tableController: IIngredientsViewTableController
+	private weak var tableController: IIngredientsViewTableController?
 	
 	private enum Constraints {
 		static let ingredientsTableOffset: CGFloat = 10
@@ -36,10 +36,10 @@ final class IngredientsView: UIView {
 
 private extension IngredientsView {
 	func configureTable() {
-		self.ingredientsTable.register(UITableViewCell.self, forCellReuseIdentifier: self.tableController.cellId)
+		self.ingredientsTable.register(UITableViewCell.self, forCellReuseIdentifier: self.tableController?.cellId ?? "")
 		
-		self.ingredientsTable.delegate = self.tableController.delegate
-		self.ingredientsTable.dataSource = self.tableController.dataSource
+		self.ingredientsTable.delegate = self.tableController?.delegate
+		self.ingredientsTable.dataSource = self.tableController?.dataSource
 	}
 	
 	func setupTableAppearance() {

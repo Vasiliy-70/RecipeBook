@@ -14,7 +14,7 @@ protocol IMainView {
 
 class MainView: UIView {
 	private let recipesTable = UITableView()
-	private let tableController: IMainViewTableController
+	private weak var tableController: IMainViewTableController?
 	
 	private enum Constraints {
 		static let recipesTableOffset: CGFloat = 10
@@ -37,10 +37,10 @@ class MainView: UIView {
 
 private extension MainView {
 	func configureTable() {
-		self.recipesTable.register(MainViewTableCell.self, forCellReuseIdentifier: self.tableController.cellId)
+		self.recipesTable.register(MainViewTableCell.self, forCellReuseIdentifier: self.tableController?.cellId ?? "")
 		
-		self.recipesTable.delegate = self.tableController.delegate
-		self.recipesTable.dataSource = self.tableController.dataSource
+		self.recipesTable.delegate = self.tableController?.delegate
+		self.recipesTable.dataSource = self.tableController?.dataSource
 	}
 	
 	func setupTableAppearance() {

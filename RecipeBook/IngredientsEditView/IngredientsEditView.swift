@@ -14,7 +14,7 @@ protocol IIngredientsEditView {
 
 final class IngredientsEditView: UIView {
 	private let ingredientsTable = UITableView()
-	private let tableController: IIngredientEditViewTableController
+	private weak var tableController: IIngredientEditViewTableController?
 	private var applyButton = UIButton()
 	
 	private enum Constraints {
@@ -48,9 +48,9 @@ private extension IngredientsEditView {
 	}
 	
 	func configureTable() {
-		self.ingredientsTable.register(UITableViewCell.self, forCellReuseIdentifier: self.tableController.cellId)
-		self.ingredientsTable.delegate = self.tableController.delegate
-		self.ingredientsTable.dataSource = self.tableController.dataSource
+		self.ingredientsTable.register(UITableViewCell.self, forCellReuseIdentifier: self.tableController?.cellId ?? "")
+		self.ingredientsTable.delegate = self.tableController?.delegate
+		self.ingredientsTable.dataSource = self.tableController?.dataSource
 	}
 	
 	func configureButton() {

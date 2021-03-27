@@ -39,7 +39,7 @@ final class MainViewTableCell: UITableViewCell {
 	
 	private enum Constraints {
 		static let imageViewOffset: CGFloat = 10
-		static let cellHeight: CGFloat = 200
+		static let cellHeight: CGFloat = 300
 		
 		static let titleHeight: CGFloat = 40
 		static let cartIconWidth: CGFloat = 40
